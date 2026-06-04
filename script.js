@@ -85,7 +85,7 @@ styleEl.textContent = '.visible { opacity: 1 !important; transform: translateY(0
 document.head.appendChild(styleEl);
 
 const fadeEls = document.querySelectorAll(
-  '.skill-bar-item, .timeline-item, .about-grid, .contact-item, .skills-col'
+  '.skill-bar-item, .timeline-item, .about-grid, .contact-item, .skills-col, .cert-card'
 );
 const fadeObs = new IntersectionObserver(
   entries => entries.forEach(e => {
