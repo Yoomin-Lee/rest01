@@ -50,7 +50,7 @@
 
   --nav-bg:         rgba(255,255,255,0.88);
   --hero-grad:      linear-gradient(135deg, #FAF7FF 0%, #EDE9FE 50%, #FAF7FF 100%);
-  --bar-grad:       linear-gradient(90deg, #7C3AED, #A78BFA);
+  --bar-grad:       linear-gradient(90deg, #F5C518 0%, #7C3AED 60%, #A78BFA 100%);
   --photo-shadow:   rgba(124,58,237,0.18);
   --placeholder-grad: linear-gradient(135deg, #7C3AED, #5B21B6);
 }
@@ -79,7 +79,7 @@
 
     --nav-bg:         rgba(15,10,30,0.88);
     --hero-grad:      linear-gradient(135deg, #0F0A1E 0%, #1A1033 50%, #0F0A1E 100%);
-    --bar-grad:       linear-gradient(90deg, #F5C518, #FCD34D);
+    --bar-grad:       linear-gradient(90deg, #F5C518 0%, #FCD34D 50%, #A78BFA 100%);
     --photo-shadow:   rgba(245,197,24,0.18);
     --placeholder-grad: linear-gradient(135deg, #F5C518, #D4A017);
   }
@@ -104,7 +104,7 @@
 
   --nav-bg:         rgba(15,10,30,0.88);
   --hero-grad:      linear-gradient(135deg, #0F0A1E 0%, #1A1033 50%, #0F0A1E 100%);
-  --bar-grad:       linear-gradient(90deg, #F5C518, #FCD34D);
+  --bar-grad:       linear-gradient(90deg, #F5C518 0%, #FCD34D 50%, #A78BFA 100%);
   --photo-shadow:   rgba(245,197,24,0.18);
   --placeholder-grad: linear-gradient(135deg, #F5C518, #D4A017);
 }

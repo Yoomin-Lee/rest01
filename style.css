@@ -297,7 +297,7 @@ section { padding: 96px 0; }
 }
 .skill-val { color: var(--fg-muted); font-weight: 400; }
 .skill-bar-track {
-  height: 10px;
+  height: 12px;
   background: var(--border);
   border-radius: 100px;
   overflow: hidden;
@@ -306,8 +306,15 @@ section { padding: 96px 0; }
   height: 100%;
   width: 0;
   background: var(--bar-grad);
+  background-size: 200% 100%;
   border-radius: 100px;
   transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: shimmer 2.4s ease-in-out infinite;
+  box-shadow: 0 0 8px var(--accent-shadow);
+}
+@keyframes shimmer {
+  0%   { background-position: 200% center; }
+  100% { background-position: -200% center; }
 }
 
 /* ===== TIMELINE ===== */
