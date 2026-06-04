@@ -225,20 +225,6 @@ section { padding: 96px 0; }
 }
 .btn-outline:hover { background: var(--accent-bg); color: var(--accent); }
 
-/* scroll hint */
-.hero-scroll-hint { text-align: center; padding-bottom: 32px; }
-.hero-scroll-hint span {
-  display: inline-block;
-  width: 2px;
-  height: 40px;
-  background: linear-gradient(to bottom, var(--highlight), transparent);
-  animation: scrollDown 1.8s ease-in-out infinite;
-}
-@keyframes scrollDown {
-  0%   { transform: translateY(-8px); opacity: 0; }
-  40%  { opacity: 1; }
-  100% { transform: translateY(8px); opacity: 0; }
-}
 
 /* ===== SECTION TITLE ===== */
 .section-title {
