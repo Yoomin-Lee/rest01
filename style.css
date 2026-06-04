@@ -253,7 +253,7 @@ section { padding: 96px 0; }
   position: absolute;
   left: 0; bottom: -8px;
   width: 100%; height: 4px;
-  background: var(--highlight);
+  background: var(--p2);
   border-radius: 2px;
 }
 
