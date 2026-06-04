@@ -160,6 +160,29 @@ section { padding: 96px 0; }
 }
 .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
 
+/* ===== HERO JS EFFECTS ===== */
+@keyframes heroFloat {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-12px); }
+}
+.hero-photo-wrap {
+  animation: heroFloat 4s ease-in-out infinite;
+}
+
+.typed-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: var(--fg-muted);
+  margin-left: 3px;
+  vertical-align: text-bottom;
+  animation: cursorBlink 0.75s step-end infinite;
+}
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
 /* ===== BUTTONS ===== */
 .btn {
   display: inline-block;

@@ -29,13 +29,63 @@ links.querySelectorAll('a').forEach(a =>
   a.addEventListener('click', () => links.classList.remove('open'))
 );
 
-// fade-in on scroll
+// ===== HERO EFFECTS =====
+
+// 1) 순차 등장 애니메이션
+const heroSequence = [
+  document.querySelector('.hero-photo-wrap'),
+  document.querySelector('.hero-greeting'),
+  document.querySelector('.hero-name'),
+  document.querySelector('.hero-tagline'),
+  document.querySelector('.hero-cta'),
+];
+heroSequence.forEach((el, i) => {
+  if (!el) return;
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(28px)';
+  el.style.transition = `opacity 0.65s ease ${i * 0.18}s, transform 0.65s ease ${i * 0.18}s`;
+});
+window.addEventListener('load', () => {
+  requestAnimationFrame(() => {
+    heroSequence.forEach(el => {
+      if (!el) return;
+      el.style.opacity = '1';
+      el.style.transform = 'translateY(0)';
+    });
+  });
+
+  // 2) 타이핑 효과 (tagline)
+  const taglineEl = document.querySelector('.hero-tagline');
+  if (taglineEl) {
+    const fullText = taglineEl.textContent.trim();
+    taglineEl.textContent = '';
+
+    const cursor = document.createElement('span');
+    cursor.className = 'typed-cursor';
+    taglineEl.appendChild(cursor);
+
+    let idx = 0;
+    const typeNext = () => {
+      if (idx < fullText.length) {
+        taglineEl.insertBefore(document.createTextNode(fullText[idx]), cursor);
+        idx++;
+        setTimeout(typeNext, 55);
+      } else {
+        setTimeout(() => cursor.remove(), 1800);
+      }
+    };
+    // 등장 애니메이션(4번째 요소, 0.54s) 끝난 뒤 시작
+    setTimeout(typeNext, 900);
+  }
+});
+
+// ===== SCROLL FADE-IN =====
 const styleEl = document.createElement('style');
 styleEl.textContent = '.visible { opacity: 1 !important; transform: translateY(0) !important; }';
 document.head.appendChild(styleEl);
 
 const fadeEls = document.querySelectorAll(
-  '.skill-bar-item, .timeline-item, .project-card, .about-grid, .contact-item, .skills-col'
+  '.skill-bar-item, .timeline-item, .about-grid, .contact-item, .skills-col'
 );
 const fadeObs = new IntersectionObserver(
   entries => entries.forEach(e => {
@@ -50,14 +100,13 @@ fadeEls.forEach(el => {
   fadeObs.observe(el);
 });
 
-// skill bar animation — trigger when skills section enters viewport
+// ===== SKILL BAR ANIMATION =====
 const skillBars = document.querySelectorAll('.skill-bar-fill');
 const skillObs = new IntersectionObserver(
   entries => {
     entries.forEach(e => {
       if (e.isIntersecting) {
-        const w = e.target.getAttribute('data-width');
-        e.target.style.width = w + '%';
+        e.target.style.width = e.target.getAttribute('data-width') + '%';
         skillObs.unobserve(e.target);
       }
     });
@@ -66,15 +115,12 @@ const skillObs = new IntersectionObserver(
 );
 skillBars.forEach(b => skillObs.observe(b));
 
-// re-check already-visible elements after load
 window.addEventListener('load', () => {
   fadeEls.forEach(el => {
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight) el.classList.add('visible');
+    if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('visible');
   });
   skillBars.forEach(b => {
-    const rect = b.getBoundingClientRect();
-    if (rect.top < window.innerHeight) {
+    if (b.getBoundingClientRect().top < window.innerHeight) {
       b.style.width = b.getAttribute('data-width') + '%';
     }
   });
