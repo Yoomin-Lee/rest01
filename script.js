@@ -147,6 +147,7 @@ const skillObs = new IntersectionObserver(
     entries.forEach(e => {
       if (e.isIntersecting) {
         e.target.style.width = e.target.getAttribute('data-width') + '%';
+        setTimeout(() => e.target.classList.add('shimmer-once'), 200);
         skillObs.unobserve(e.target);
       }
     });
