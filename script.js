@@ -1,3 +1,27 @@
+// ===== SPARKLE CURSOR TRAIL =====
+const sparkleColors = ['#F5C518', '#FCD34D', '#7C3AED', '#A78BFA', '#C4B5FD'];
+let lastSparkle = 0;
+
+document.addEventListener('mousemove', (e) => {
+  const now = Date.now();
+  if (now - lastSparkle < 45) return; // 45ms 쓰로틀
+  lastSparkle = now;
+
+  const el = document.createElement('span');
+  el.className = 'sparkle';
+  const size = Math.random() * 7 + 4;
+  el.style.cssText = `
+    left:${e.clientX}px;
+    top:${e.clientY}px;
+    width:${size}px;
+    height:${size}px;
+    background:${sparkleColors[Math.floor(Math.random() * sparkleColors.length)]};
+    box-shadow: 0 0 ${size * 1.5}px ${sparkleColors[0]};
+  `;
+  document.body.appendChild(el);
+  setTimeout(() => el.remove(), 650);
+});
+
 // ===== DARK MODE TOGGLE =====
 const html = document.documentElement;
 const themeToggle = document.getElementById('themeToggle');
