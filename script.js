@@ -1,3 +1,19 @@
+// ===== DARK MODE TOGGLE =====
+const html = document.documentElement;
+const themeToggle = document.getElementById('themeToggle');
+
+// 저장된 테마 복원
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) html.dataset.theme = savedTheme;
+
+themeToggle.addEventListener('click', () => {
+  const isDark = html.dataset.theme === 'dark' ||
+    (!html.dataset.theme && window.matchMedia('(prefers-color-scheme: dark)').matches);
+  const next = isDark ? 'light' : 'dark';
+  html.dataset.theme = next;
+  localStorage.setItem('theme', next);
+});
+
 // navbar scroll shadow
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
