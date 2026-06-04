@@ -31,14 +31,18 @@
   <section id="hero">
     <div class="hero-content">
       <div class="hero-photo-wrap">
-        <!-- 프로필 사진을 images/profile.jpg 로 추가해 주세요 -->
-        <img src="images/profile.jpg" alt="프로필 사진" class="hero-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+        <img
+          src="https://raw.githubusercontent.com/Yoomin-Lee/Portfolio03/main/assets/img/profile-img1.png"
+          alt="이유민 프로필 사진"
+          class="hero-photo"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+        />
         <div class="hero-photo-placeholder">YM</div>
       </div>
       <div class="hero-text">
         <p class="hero-greeting">안녕하세요,</p>
         <h1 class="hero-name">이유민<span class="hero-name-en">Yoomin Lee</span></h1>
-        <p class="hero-tagline"><!-- 한 줄 소개를 여기에 작성해 주세요 --></p>
+        <p class="hero-tagline">History Researcher &amp; Junior Web Developer</p>
         <div class="hero-cta">
           <a href="#contact" class="btn btn-primary">연락하기</a>
           <a href="#projects" class="btn btn-outline">프로젝트 보기</a>
@@ -57,13 +61,17 @@
       <div class="about-grid">
         <div class="about-text">
           <p>
-            <!-- 자기소개를 여기에 작성해 주세요 -->
+            역사학을 전공하며 방대한 문헌을 분석하고 이야기를 구조화하는 능력을 키웠습니다.
+            현재는 그 탐구 정신을 웹 개발로 확장해, 과거의 기록을 현재의 언어로 풀어내는
+            새로운 방식을 배우고 있습니다. HTML · CSS · JavaScript를 공부하며
+            역사 자료를 시각적으로 표현하는 프로젝트를 만들어가고 있습니다.
           </p>
         </div>
         <ul class="about-info">
           <li><span class="label">이름</span><span>이유민</span></li>
+          <li><span class="label">생년월일</span><span>1996년 3월 25일</span></li>
           <li><span class="label">이메일</span><span>yoominggg2164@gmail.com</span></li>
-          <li><span class="label">위치</span><span><!-- 거주지 --></span></li>
+          <li><span class="label">웹사이트</span><a href="https://yoomin-lee.github.io" target="_blank">yoomin-lee.github.io</a></li>
           <li><span class="label">GitHub</span><a href="https://github.com/Yoomin-Lee" target="_blank">Yoomin-Lee</a></li>
         </ul>
       </div>
@@ -74,26 +82,42 @@
   <section id="skills" class="bg-alt">
     <div class="container">
       <h2 class="section-title">기술 스택</h2>
-      <div class="skills-grid">
-        <!-- 카테고리와 기술을 직접 채워 주세요 -->
-        <div class="skill-group">
-          <h3>Languages</h3>
-          <ul class="skill-list">
-            <!-- <li>Python</li> -->
-          </ul>
+      <div class="skills-columns">
+
+        <div class="skills-col">
+          <h3 class="skills-col-title">Web Development</h3>
+
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>HTML</span><span class="skill-val">45%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="45"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>CSS</span><span class="skill-val">30%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="30"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>JavaScript</span><span class="skill-val">25%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="25"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>Git</span><span class="skill-val">40%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="40"></div></div>
+          </div>
         </div>
-        <div class="skill-group">
-          <h3>Frameworks</h3>
-          <ul class="skill-list">
-            <!-- <li>React</li> -->
-          </ul>
+
+        <div class="skills-col">
+          <h3 class="skills-col-title">Research &amp; Analysis</h3>
+
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>역사 자료 분석</span><span class="skill-val">90%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>문헌 연구 · 보고서 작성</span><span class="skill-val">85%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+          </div>
         </div>
-        <div class="skill-group">
-          <h3>Tools</h3>
-          <ul class="skill-list">
-            <!-- <li>Git</li> -->
-          </ul>
-        </div>
+
       </div>
     </div>
   </section>
@@ -103,7 +127,7 @@
     <div class="container">
       <h2 class="section-title">경력</h2>
       <div class="timeline">
-        <!-- 경력 항목 예시 (내용을 채워 주세요)
+        <!-- 경력 항목을 추가해 주세요
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-body">
@@ -111,10 +135,11 @@
               <h3>직책 — 회사명</h3>
               <span class="timeline-period">2024.01 ~ 현재</span>
             </div>
-            <p>업무 내용을 여기에 작성하세요.</p>
+            <p>업무 내용</p>
           </div>
         </div>
         -->
+        <p class="timeline-empty">경력 사항을 추가해 주세요.</p>
       </div>
     </div>
   </section>
@@ -124,7 +149,7 @@
     <div class="container">
       <h2 class="section-title">학력</h2>
       <div class="timeline">
-        <!-- 학력 항목 예시
+        <!-- 학력 항목을 추가해 주세요
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-body">
@@ -136,6 +161,7 @@
           </div>
         </div>
         -->
+        <p class="timeline-empty">학력 사항을 추가해 주세요.</p>
       </div>
     </div>
   </section>
@@ -145,25 +171,70 @@
     <div class="container">
       <h2 class="section-title">프로젝트</h2>
       <div class="projects-grid">
-        <!-- 프로젝트 카드 예시
+
         <article class="project-card">
           <div class="project-img-wrap">
-            <img src="images/project1.png" alt="프로젝트명" />
+            <img
+              src="https://raw.githubusercontent.com/Yoomin-Lee/Portfolio03/main/assets/img/portfolio/portfolio-1.jpg"
+              alt="Project 1"
+              onerror="this.parentElement.classList.add('no-img')"
+            />
           </div>
           <div class="project-info">
-            <h3>프로젝트명</h3>
-            <p>프로젝트 설명을 여기에 작성하세요.</p>
+            <h3>Project 1</h3>
+            <p>프로젝트 설명을 여기에 입력하세요.</p>
             <div class="project-tags">
-              <span>React</span>
-              <span>Node.js</span>
+              <span>HTML</span>
+              <span>CSS</span>
             </div>
             <div class="project-links">
-              <a href="#" target="_blank">GitHub</a>
-              <a href="#" target="_blank">Live Demo</a>
+              <a href="https://github.com/Yoomin-Lee" target="_blank">GitHub</a>
             </div>
           </div>
         </article>
-        -->
+
+        <article class="project-card">
+          <div class="project-img-wrap">
+            <img
+              src="https://raw.githubusercontent.com/Yoomin-Lee/Portfolio03/main/assets/img/portfolio/portfolio-2.jpg"
+              alt="Project 2"
+              onerror="this.parentElement.classList.add('no-img')"
+            />
+          </div>
+          <div class="project-info">
+            <h3>Project 2</h3>
+            <p>프로젝트 설명을 여기에 입력하세요.</p>
+            <div class="project-tags">
+              <span>HTML</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Yoomin-Lee" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-img-wrap">
+            <img
+              src="https://raw.githubusercontent.com/Yoomin-Lee/Portfolio03/main/assets/img/portfolio/portfolio-3.jpg"
+              alt="Project 3"
+              onerror="this.parentElement.classList.add('no-img')"
+            />
+          </div>
+          <div class="project-info">
+            <h3>Project 3</h3>
+            <p>프로젝트 설명을 여기에 입력하세요.</p>
+            <div class="project-tags">
+              <span>CSS</span>
+              <span>Git</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Yoomin-Lee" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
@@ -182,12 +253,16 @@
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
           Yoomin-Lee
         </a>
+        <a href="https://yoomin-lee.github.io" target="_blank" class="contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          yoomin-lee.github.io
+        </a>
       </div>
     </div>
   </section>
 
   <footer>
-    <p>© 2026 Yoomin Lee. Built with HTML/CSS/JS.</p>
+    <p>© 2026 Yoomin Lee. All Rights Reserved.</p>
   </footer>
 
   <script src="script.js"></script>

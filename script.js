@@ -30,14 +30,18 @@ links.querySelectorAll('a').forEach(a =>
 );
 
 // fade-in on scroll
+const styleEl = document.createElement('style');
+styleEl.textContent = '.visible { opacity: 1 !important; transform: translateY(0) !important; }';
+document.head.appendChild(styleEl);
+
 const fadeEls = document.querySelectorAll(
-  '.skill-group, .timeline-item, .project-card, .about-grid, .contact-item'
+  '.skill-bar-item, .timeline-item, .project-card, .about-grid, .contact-item, .skills-col'
 );
 const fadeObs = new IntersectionObserver(
   entries => entries.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add('visible'); fadeObs.unobserve(e.target); }
   }),
-  { threshold: 0.12 }
+  { threshold: 0.1 }
 );
 fadeEls.forEach(el => {
   el.style.opacity = '0';
@@ -45,21 +49,33 @@ fadeEls.forEach(el => {
   el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
   fadeObs.observe(el);
 });
-document.addEventListener('DOMContentLoaded', () => {
-  // re-check already-visible elements after load
+
+// skill bar animation — trigger when skills section enters viewport
+const skillBars = document.querySelectorAll('.skill-bar-fill');
+const skillObs = new IntersectionObserver(
+  entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const w = e.target.getAttribute('data-width');
+        e.target.style.width = w + '%';
+        skillObs.unobserve(e.target);
+      }
+    });
+  },
+  { threshold: 0.3 }
+);
+skillBars.forEach(b => skillObs.observe(b));
+
+// re-check already-visible elements after load
+window.addEventListener('load', () => {
   fadeEls.forEach(el => {
     const rect = el.getBoundingClientRect();
     if (rect.top < window.innerHeight) el.classList.add('visible');
   });
+  skillBars.forEach(b => {
+    const rect = b.getBoundingClientRect();
+    if (rect.top < window.innerHeight) {
+      b.style.width = b.getAttribute('data-width') + '%';
+    }
+  });
 });
-
-// apply visible class
-document.addEventListener('scroll', () => {}, { passive: true });
-Object.defineProperty(HTMLElement.prototype, 'visible', {
-  set() {},
-  get() { return this.classList.contains('visible'); }
-});
-// patch: apply transition via class
-const styleEl = document.createElement('style');
-styleEl.textContent = '.visible { opacity: 1 !important; transform: translateY(0) !important; }';
-document.head.appendChild(styleEl);
