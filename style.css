@@ -327,28 +327,31 @@ section { padding: 96px 0; }
 /* ===== TIMELINE ===== */
 .timeline {
   position: relative;
-  padding-left: 32px;
 }
 .timeline::before {
   content: '';
   position: absolute;
-  left: 10px; top: 0; bottom: 0;
+  left: 6px; top: 0; bottom: 0;
   width: 2px;
   background: var(--border);
 }
 .timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
   position: relative;
   margin-bottom: 40px;
 }
 .timeline-dot {
-  position: absolute;
-  left: -28px; top: 6px;
+  flex-shrink: 0;
   width: 14px; height: 14px;
+  margin-top: 5px;
   border-radius: 50%;
   background: var(--highlight);
   border: 3px solid var(--bg);
   box-shadow: 0 0 0 2px var(--highlight);
 }
+.timeline-body { flex: 1; }
 .bg-alt .timeline-dot { border-color: var(--bg-alt); }
 .timeline-header {
   display: flex;
