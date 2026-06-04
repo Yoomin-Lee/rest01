@@ -250,7 +250,7 @@ section { padding: 96px 0; }
   gap: 48px;
   align-items: start;
 }
-.about-text p { color: var(--fg-muted); font-size: 1.05rem; }
+.about-text p { color: var(--fg-muted); font-size: 1.05rem; word-break: keep-all; }
 .about-text p + p { margin-top: 16px; }
 .about-info {
   list-style: none;
