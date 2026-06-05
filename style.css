@@ -340,7 +340,7 @@ section { padding: 96px 0; }
 .timeline-dot {
   flex-shrink: 0;
   width: 14px; height: 14px;
-  margin-top: calc((1.7 * 1.05rem - 14px) / 2);
+  margin-top: 10px;
   border-radius: 50%;
   background: var(--highlight);
   border: 3px solid var(--bg);
