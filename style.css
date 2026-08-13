@@ -129,14 +129,14 @@ section { padding: 96px 0; }
 
 .hero-photo-wrap {
   flex-shrink: 0;
-  width: 220px;
-  height: 220px;
+  width: 200px;
+  aspect-ratio: 4 / 5;
   position: relative;
 }
 .hero-photo,
 .hero-photo-placeholder {
-  width: 220px;
-  height: 220px;
+  width: 100%;
+  height: 100%;
   border-radius: var(--radius);
   object-fit: cover;
   border: 4px solid var(--bg);
