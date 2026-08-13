@@ -77,6 +77,7 @@ const heroSequence = [
   document.querySelector('.hero-greeting'),
   document.querySelector('.hero-name'),
   document.querySelector('.hero-tagline'),
+  document.querySelector('.hero-subjects'),
   document.querySelector('.hero-cta'),
 ];
 heroSequence.forEach((el, i) => {
