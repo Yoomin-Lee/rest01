@@ -309,7 +309,7 @@ section { padding: 96px 0; }
 .skill-val { color: var(--fg-muted); font-weight: 400; }
 .skill-bar-track {
   height: 12px;
-  background: var(--border);
+  background: var(--track-bg);
   border-radius: 100px;
   overflow: hidden;
 }
@@ -319,6 +319,8 @@ section { padding: 96px 0; }
   background: var(--bar-grad);
   background-size: 200% 100%;
   border-radius: 100px;
+  border: 1px solid var(--bar-edge);
+  box-sizing: border-box;
   transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 0 8px var(--bar-shadow);
 }

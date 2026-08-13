@@ -52,6 +52,8 @@
   --hero-grad:      linear-gradient(135deg, #F0F5FF 0%, #DBEAFE 50%, #F0F5FF 100%);
   --bar-grad:       linear-gradient(90deg, #FFFFFF 0%, #93C5FD 45%, #2563EB 100%);
   --bar-shadow:     rgba(37,99,235,0.25);
+  --track-bg:       #9FC0EA;          /* 스킬 바 트랙 — 화이트 채움과 대비되도록 진하게 */
+  --bar-edge:       rgba(29,78,216,0.55);
   --photo-shadow:   rgba(37,99,235,0.18);
   --placeholder-grad: linear-gradient(135deg, #2563EB, #1D4ED8);
 }
@@ -82,6 +84,8 @@
     --hero-grad:      linear-gradient(135deg, #0A1628 0%, #122238 50%, #0A1628 100%);
     --bar-grad:       linear-gradient(90deg, #FFFFFF 0%, #93C5FD 45%, #2563EB 100%);
     --bar-shadow:     rgba(96,165,250,0.35);
+    --track-bg:       #1B2C47;        /* 스킬 바 트랙 — 화이트 채움과 대비되도록 진하게 */
+    --bar-edge:       rgba(147,197,253,0.5);
     --photo-shadow:   rgba(245,197,24,0.18);
     --placeholder-grad: linear-gradient(135deg, #F5C518, #D4A017);
   }
@@ -108,6 +112,8 @@
   --hero-grad:      linear-gradient(135deg, #0A1628 0%, #122238 50%, #0A1628 100%);
   --bar-grad:       linear-gradient(90deg, #FFFFFF 0%, #93C5FD 45%, #2563EB 100%);
   --bar-shadow:     rgba(96,165,250,0.35);
+  --track-bg:       #1B2C47;          /* 스킬 바 트랙 — 화이트 채움과 대비되도록 진하게 */
+  --bar-edge:       rgba(147,197,253,0.5);
   --photo-shadow:   rgba(245,197,24,0.18);
   --placeholder-grad: linear-gradient(135deg, #F5C518, #D4A017);
 }
