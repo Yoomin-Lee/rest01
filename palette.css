@@ -1,58 +1,58 @@
 /*
  * ┌─────────────────────────────────────────────────────┐
- * │  PALETTE  :  Yellow + Violet                        │
+ * │  PALETTE  :  Yellow + Blue                          │
  * │  주컬러   :  Yellow   #F5C518                       │
  * │  보조컬러 :  Yellow 50%  rgba(245,197,24,0.5)       │
- * │  이벤트   :  Violet  #7C3AED                        │
+ * │  이벤트   :  Blue    #2563EB                        │
  * │                                                     │
  * │  다른 팔레트로 교체하려면 이 파일만 바꾸세요.        │
  * └─────────────────────────────────────────────────────┘
  *
  *  5-Color Raw Palette
  *  ┌──────┬──────────┬────────────────────┐
- *  │ --p1 │ #1E0A3C  │ Deep Violet        │
- *  │ --p2 │ #7C3AED  │ Violet (event)     │
+ *  │ --p1 │ #0B2545  │ Deep Navy          │
+ *  │ --p2 │ #2563EB  │ Blue (event)       │
  *  │ --p3 │ #F5C518  │ Yellow (primary)   │
  *  │ --p4 │ 50% yw.  │ Yellow 50% (sub)   │
- *  │ --p5 │ #FAF7FF  │ Lavender Cream     │
+ *  │ --p5 │ #F0F5FF  │ Ice Blue Cream     │
  *  └──────┴──────────┴────────────────────┘
  */
 
 /* ── Raw palette tokens (항상 고정) ── */
 :root {
-  --p1: #1E0A3C;
-  --p2: #7C3AED;
+  --p1: #0B2545;
+  --p2: #2563EB;
   --p3: #F5C518;
   --p4: rgba(245, 197, 24, 0.50);
-  --p5: #FAF7FF;
+  --p5: #F0F5FF;
 }
 
 /* ══════════════════════════════════════
    LIGHT MODE  (기본값)
-   접근성: Violet on White = 4.8:1 (AA ✓)
-          Deep Violet on White = 18.9:1 (AAA ✓)
+   접근성: Blue on White = 5.2:1 (AA ✓)
+          Deep Navy on White = 15.7:1 (AAA ✓)
    ══════════════════════════════════════ */
 :root {
-  --accent:         #7C3AED;          /* Violet — 링크·버튼·강조 */
-  --accent-dk:      #5B21B6;          /* Violet 진하게 — 호버 */
-  --accent-bg:      #EDE9FE;          /* Violet 연하게 — 배지·호버 배경 */
-  --accent-shadow:  rgba(124,58,237,0.12);
+  --accent:         #2563EB;          /* Blue — 링크·버튼·강조 (신뢰감) */
+  --accent-dk:      #1D4ED8;          /* Blue 진하게 — 호버 */
+  --accent-bg:      #DBEAFE;          /* Blue 연하게 — 배지·호버 배경 */
+  --accent-shadow:  rgba(37,99,235,0.12);
 
   --highlight:      #F5C518;          /* Yellow — 타이틀 바·스킬 바 */
   --highlight-dk:   #D4A017;
   --highlight-bg:   rgba(245,197,24,0.15);
 
-  --fg:             #1E0A3C;          /* Deep Violet — 본문 텍스트 */
-  --fg-muted:       #6B5B95;          /* Muted Violet — 보조 텍스트 */
+  --fg:             #0B2545;          /* Deep Navy — 본문 텍스트 */
+  --fg-muted:       #4A6B94;          /* Muted Blue — 보조 텍스트 */
   --bg:             #FFFFFF;
-  --bg-alt:         #FAF7FF;          /* Lavender Cream */
-  --border:         #E9D8FD;
+  --bg-alt:         #F0F5FF;          /* Ice Blue Cream */
+  --border:         #D6E4FA;
 
   --nav-bg:         rgba(255,255,255,0.88);
-  --hero-grad:      linear-gradient(135deg, #FAF7FF 0%, #EDE9FE 50%, #FAF7FF 100%);
-  --bar-grad:       linear-gradient(90deg, #F5C518 0%, #7C3AED 60%, #A78BFA 100%);
-  --photo-shadow:   rgba(124,58,237,0.18);
-  --placeholder-grad: linear-gradient(135deg, #7C3AED, #5B21B6);
+  --hero-grad:      linear-gradient(135deg, #F0F5FF 0%, #DBEAFE 50%, #F0F5FF 100%);
+  --bar-grad:       linear-gradient(90deg, #F5C518 0%, #2563EB 60%, #60A5FA 100%);
+  --photo-shadow:   rgba(37,99,235,0.18);
+  --placeholder-grad: linear-gradient(135deg, #2563EB, #1D4ED8);
 }
 
 /* ══════════════════════════════════════
@@ -67,19 +67,19 @@
     --accent-bg:      rgba(245,197,24,0.12);
     --accent-shadow:  rgba(245,197,24,0.15);
 
-    --highlight:      #A78BFA;         /* Light Violet — 장식 요소 */
-    --highlight-dk:   #7C3AED;
-    --highlight-bg:   rgba(167,139,250,0.15);
+    --highlight:      #60A5FA;         /* Light Blue — 장식 요소 (신뢰감) */
+    --highlight-dk:   #2563EB;
+    --highlight-bg:   rgba(96,165,250,0.15);
 
-    --fg:             #F5F0FF;
-    --fg-muted:       #C4B5FD;
-    --bg:             #0F0A1E;
-    --bg-alt:         #1A1033;
-    --border:         #3B2F6E;
+    --fg:             #F0F5FF;
+    --fg-muted:       #93C5FD;
+    --bg:             #0A1628;
+    --bg-alt:         #122238;
+    --border:         #24406B;
 
-    --nav-bg:         rgba(15,10,30,0.88);
-    --hero-grad:      linear-gradient(135deg, #0F0A1E 0%, #1A1033 50%, #0F0A1E 100%);
-    --bar-grad:       linear-gradient(90deg, #F5C518 0%, #FCD34D 50%, #A78BFA 100%);
+    --nav-bg:         rgba(10,22,40,0.88);
+    --hero-grad:      linear-gradient(135deg, #0A1628 0%, #122238 50%, #0A1628 100%);
+    --bar-grad:       linear-gradient(90deg, #F5C518 0%, #FCD34D 50%, #60A5FA 100%);
     --photo-shadow:   rgba(245,197,24,0.18);
     --placeholder-grad: linear-gradient(135deg, #F5C518, #D4A017);
   }
@@ -92,19 +92,19 @@
   --accent-bg:      rgba(245,197,24,0.12);
   --accent-shadow:  rgba(245,197,24,0.15);
 
-  --highlight:      #A78BFA;
-  --highlight-dk:   #7C3AED;
-  --highlight-bg:   rgba(167,139,250,0.15);
+  --highlight:      #60A5FA;
+  --highlight-dk:   #2563EB;
+  --highlight-bg:   rgba(96,165,250,0.15);
 
-  --fg:             #F5F0FF;
-  --fg-muted:       #C4B5FD;
-  --bg:             #0F0A1E;
-  --bg-alt:         #1A1033;
-  --border:         #3B2F6E;
+  --fg:             #F0F5FF;
+  --fg-muted:       #93C5FD;
+  --bg:             #0A1628;
+  --bg-alt:         #122238;
+  --border:         #24406B;
 
-  --nav-bg:         rgba(15,10,30,0.88);
-  --hero-grad:      linear-gradient(135deg, #0F0A1E 0%, #1A1033 50%, #0F0A1E 100%);
-  --bar-grad:       linear-gradient(90deg, #F5C518 0%, #FCD34D 50%, #A78BFA 100%);
+  --nav-bg:         rgba(10,22,40,0.88);
+  --hero-grad:      linear-gradient(135deg, #0A1628 0%, #122238 50%, #0A1628 100%);
+  --bar-grad:       linear-gradient(90deg, #F5C518 0%, #FCD34D 50%, #60A5FA 100%);
   --photo-shadow:   rgba(245,197,24,0.18);
   --placeholder-grad: linear-gradient(135deg, #F5C518, #D4A017);
 }

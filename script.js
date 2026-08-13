@@ -1,5 +1,5 @@
 // ===== SPARKLE CURSOR TRAIL =====
-const sparkleColors = ['#F5C518', '#FCD34D', '#7C3AED', '#A78BFA', '#C4B5FD'];
+const sparkleColors = ['#F5C518', '#FCD34D', '#2563EB', '#60A5FA', '#93C5FD'];
 let lastSparkle = 0;
 
 document.addEventListener('mousemove', (e) => {
